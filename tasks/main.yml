@@ -31,7 +31,7 @@
     user_install=false
 
 - name: Install turnip for Ruby using the Bundler gem
-  command: "{{ turnip_rbenv }}/bin/rbenv exec bundler install --path vendor/bundle"
+  command: "{{ turnip_rbenv }}/bin/rbenv exec bundle install --path vendor/bundle"
   environment:
     RBENV_ROOT: "{{ turnip_rbenv }}"
   args:
