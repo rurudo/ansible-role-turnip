@@ -39,7 +39,7 @@
     creates: "{{ turnip_workspace }}/vendor"
 
 - name: Set bundler path
-  command: bash -lc "rbenv rehash"
+  command: "{{ turnip_rbenv }}/bin/rbenv rehash"
   args:
     chdir: "{{ turnip_workspace }}"
     creates: "{{ turnip_rbenv }}/shims/bundle"
